@@ -1,0 +1,17 @@
+.program spwm
+.side_set 2
+    OUT ISR, 32 side 0
+.wrap_target
+new_word:
+    OUT Y, 32 side 0
+    MOV X ISR side 0
+    JMP !OSRE keep_output_state side 0
+    MOV OSR Y side 0
+keep_output_state:
+    JMP X-- no_jmp side 2
+no_jmp:
+    JMP X!=Y keep_output_state side 2
+    NOP [2] side 0
+same_old_word:
+    JMP X-- same_old_word [1] side 1
+.wrap

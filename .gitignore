@@ -1,6 +1,7 @@
 # For PCBs designed using KiCad: http://www.kicad-pcb.org/
 # Format documentation: http://kicad-pcb.org/help/file-formats/
-
+*.pdf
+*.zip
 # Temporary files
 *.000
 *.bak
@@ -26,3 +27,5 @@ fp-info-cache
 *.csv
 
 *.zip
+
+pico_buck_sw/build/*
